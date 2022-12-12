@@ -1,0 +1,10 @@
+<p>
+    <mat-toolbar color="primary">
+        <span class="title">Salón Venus</span>
+    </mat-toolbar>
+</p>
+<div class="main">
+    <mat-grid-list cols="2" rowHeight="5:2">
+        <mat-grid-tile *ngFor="let page of pages">{{page.name}}</mat-grid-tile>
+    </mat-grid-list>
+</div>
