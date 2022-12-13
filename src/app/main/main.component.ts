@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Page } from 'src/interfaces/page';
+import { PageView} from 'src/utils/interfaces';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -7,7 +7,7 @@ import { Page } from 'src/interfaces/page';
 })
 export class MainComponent implements OnInit{
   //Mocks
-  pagesMock: Page[] = [
+  pagesMock: PageView[] = [
     {
       id: 0,
       name: "Crear pedido"
@@ -15,18 +15,13 @@ export class MainComponent implements OnInit{
     {
       id: 1,
       name: "Ver Pedidos"
-    },
-    {
-      id: 2,
-      name: "test"
     }
   ]
 
-
-  public pages: Page[] = []
+  public pagesView: PageView[] = []
 
 
   ngOnInit(): void {
-    this.pages = this.pagesMock;
+    this.pagesView = this.pagesMock;
   }
 }
