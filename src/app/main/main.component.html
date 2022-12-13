@@ -1,8 +1,4 @@
-<p>
-    <mat-toolbar color="primary">
-        <span class="title">Salón Venus</span>
-    </mat-toolbar>
-</p>
 <div class="main">
-    <button *ngFor="let pageView of pagesView" class="pageViewButton" color="primary">{{pageView.name}}</button>
+    <button *ngFor="let pageView of pagesView" class="pageViewButton" color="primary"
+        routerLink="{{pageView.route}}">{{pageView.name}}</button>
 </div>

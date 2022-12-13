@@ -1,6 +1,7 @@
 export interface PageView {
     id: number,
-    name: string
+    name: string,
+    route: string
 }
 
 export interface ProductCategory{
@@ -13,14 +14,19 @@ export interface Product {
     name: string,
     price: number,
     image: string,
-    category: ProductCategory,
+    category: number,
+}
+
+export interface ProductItem {
+    id: number,
+    total: number
 }
 
 export interface Order {
     id: number,
     total: number,
     owner?: string,
-    productList: Product[],
+    productList: ProductItem[],
     status: boolean,
     table?: number 
 }

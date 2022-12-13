@@ -11,12 +11,18 @@ import { MainComponent } from './main/main.component';
 //Angular Material
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatGridListModule} from '@angular/material/grid-list';
-import {MatButtonModule} from '@angular/material/button';
+import {MatButtonModule } from '@angular/material/button';
+import { CreateOrderComponent } from './create-order/create-order.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    CreateOrderComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +30,11 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatGridListModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule,
+    MatTabsModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

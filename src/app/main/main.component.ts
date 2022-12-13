@@ -10,11 +10,13 @@ export class MainComponent implements OnInit{
   pagesMock: PageView[] = [
     {
       id: 0,
-      name: "Crear pedido"
+      name: "Crear pedido",
+      route: "/createOrder"
     },
     {
       id: 1,
-      name: "Ver Pedidos"
+      name: "Ver Pedidos",
+      route: "/seeOrders"
     }
   ]
 
