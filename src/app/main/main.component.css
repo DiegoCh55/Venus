@@ -1,4 +1,22 @@
-mat-grid-tile {
-    background: lightblue;
-    font-size: 25px;
-  }
+.main{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: space-around;
+}
+
+.pageViewButton {
+  height: 300px;
+  font-size: 30px;
+  color: white;
+  background-color: #F9AC02;
+  border: #F9AC02;
+}
+
+.pageViewButton:hover  {
+  background-color: #eba612;
+}
+
+.pageViewButton:active  {
+  background-color: #aa812a;
+}

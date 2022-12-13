@@ -4,7 +4,5 @@
     </mat-toolbar>
 </p>
 <div class="main">
-    <mat-grid-list cols="2" rowHeight="5:2">
-        <mat-grid-tile *ngFor="let page of pages">{{page.name}}</mat-grid-tile>
-    </mat-grid-list>
+    <button *ngFor="let pageView of pagesView" class="pageViewButton" color="primary">{{pageView.name}}</button>
 </div>
