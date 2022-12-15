@@ -1,34 +1,52 @@
 <div class="main">
-    <mat-form-field class="name">
-        <mat-label>Nombre</mat-label>
-        <input matInput placeholder="Ejemplo: Diego Chacon">
-    </mat-form-field>
-    <div class="products">
-        <mat-tab-group #tabGroup (selectedTabChange)="tabChange($event)" animationDuration="0ms">
-            <mat-tab #Category *ngFor="let productC of productCategories" label="{{productC.name}}"
-                class="category-tab">
-                <div class="tab-content" *ngFor="let product of productsTab">
-                    <div class="product">
-                        <img src="{{product.image}}" alt="product.name">
-                        <span class="procuct-name">{{product.name}}</span>
-                        <div class="add-remove">
-                            <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
-                                <mat-icon>remove</mat-icon>
-                            </button>
-                            <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon" (click)="addProduct(product.id)">
-                                <mat-icon>add</mat-icon>
-                            </button>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Crea la orden</mat-card-title>
+            <mat-card-subtitle>Selecciona los productos</mat-card-subtitle>
+        </mat-card-header>
+        <div class="products">
+            <mat-tab-group #tabGroup (selectedTabChange)="tabChange($event)" animationDuration="0ms">
+                <mat-tab #Category *ngFor="let productC of productCategories" label="{{productC.name}}"
+                    class="category-tab">
+                    <div class="tab-content">
+                        <div class="product" *ngFor="let product of productsTab">
+                            <img src="{{product.image}}" alt="product.name">
+                            <span class="procuct-name">{{product.name}}</span>
+                            <div class="add-remove">
+                                <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+                                    <mat-icon>remove</mat-icon>
+                                </button>
+                                <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon"
+                                    (click)="addProduct(product.id)">
+                                    <mat-icon>add</mat-icon>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </mat-tab>
-        </mat-tab-group>
-        
-        <mat-list>
-            <mat-list-item *ngFor="let orderP of order.productList">{{orderP.total}}x {{getProductName(orderP.id)}}</mat-list-item>
-        </mat-list>
-    </div>
-    <div class="orderList">
-
-    </div>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+    </mat-card>
+    <br>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Orden</mat-card-title>
+        </mat-card-header>
+        <div class="order-list-content">
+            <mat-list>
+                <mat-list-item *ngFor="let orderP of order.productList">{{orderP.total}}x
+                    {{getProductName(orderP.id)}}</mat-list-item>
+            </mat-list>
+        </div>
+    </mat-card>
+    <br>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Rellena los datos</mat-card-title>
+        </mat-card-header>
+        <mat-form-field class="name">
+            <mat-label>Nombre</mat-label>
+            <input matInput placeholder="Ejemplo: Diego Chacon">
+        </mat-form-field>
+    </mat-card>
 </div>

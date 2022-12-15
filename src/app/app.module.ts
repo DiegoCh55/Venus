@@ -17,6 +17,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {MatListModule} from '@angular/material/list';
     MatInputModule,
     MatTabsModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

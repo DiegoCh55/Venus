@@ -1,15 +1,19 @@
 .main {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.name {
-    width: 100%;
-}   
+mat-card {
+    width: 95%;
+}
 
 .tab-content {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    flex-wrap: wrap;
+    height: 600px;
     padding: 5px;
 }
 
@@ -17,11 +21,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 400px;
+    width: 200px;
 }
 
 .product img {
-    height: 100px;
-    width: 100px;
+    height: 250px;
+    width: 250px;
 }
 
 .procuct-name {
@@ -32,4 +38,13 @@
 .add-remove {
     display: flex;
     flex-direction: row;
+}
+
+.order-list-content{
+    height: 400px;
+    background-color: gray;
+}
+
+.name {
+    width: 100%;
 }
